@@ -12,10 +12,10 @@ slides.forEach((_,i)=>{const d=document.createElement('button');d.type='button';
 const dots=[...dotsEl.children];
 
 function st(d){
-  if(d===0) return ['none',1,2,'auto'];
-  if(d===1) return ['rotateX(-58deg) translateZ(-520px) scale(.84)',0,1,'none'];
-  if(d===-1) return ['rotateX(58deg) translateZ(-520px) scale(.84)',0,1,'none'];
-  return ['translateZ(-1000px) scale(.6)',0,0,'none'];
+  if(d===0) return ['none',1,2,'auto','blur(0px)'];
+  if(d===1) return ['translateZ(-700px) scale(.88)',0,1,'none','blur(6px)'];
+  if(d===-1) return ['translateZ(460px)',0,1,'none','blur(6px)'];
+  return d>1 ? ['translateZ(-1200px) scale(.7)',0,0,'none','blur(8px)'] : ['translateZ(900px)',0,0,'none','blur(8px)'];
 }
 function showBg(){
   const idx=cur%vids.length;
@@ -28,7 +28,7 @@ function showBg(){
   });
 }
 function render(){
-  slides.forEach((s,i)=>{const [t,o,z,p]=st(i-cur); s.style.transform=t; s.style.opacity=o; s.style.zIndex=z; s.style.pointerEvents=p;});
+  slides.forEach((s,i)=>{const [t,o,z,p,f]=st(i-cur); s.style.transform=t; s.style.opacity=o; s.style.zIndex=z; s.style.pointerEvents=p; s.style.filter=f; s.style.transitionDelay=(i===cur)?'0s,.14s,.1s':'0s';});
   dots.forEach((d,i)=>d.classList.toggle('on',i===cur));
   const a=slides[cur];
   a.classList.remove('go'); void a.offsetWidth;
@@ -36,7 +36,7 @@ function render(){
   a.classList.add('go');
   showBg();
 }
-function go(i){ if(busy||i===cur||i<0||i>=N) return; cur=i; busy=true; render(); setTimeout(()=>busy=false,820); }
+function go(i){ if(busy||i===cur||i<0||i>=N) return; cur=i; busy=true; render(); setTimeout(()=>busy=false,900); }
 const next=()=>go(Math.min(cur+1,N-1)), prev=()=>go(Math.max(cur-1,0));
 
 let wl=false;
