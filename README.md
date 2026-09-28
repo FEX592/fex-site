@@ -34,5 +34,5 @@ Or from the terminal: `npx vercel --prod`
 
 - **WhatsApp number and message:** the `wa.me` link in the Contact section of `index.html`.
 - **Colours:** the `:root` variables at the top of `css/styles.css`.
-- **Backgrounds:** replace the files in `assets/videos/` (keep the same names, or update `data-src` in `index.html`). Keep them short, muted and under about 2 MB each.
+- **Backgrounds:** replace the files in `assets/videos/` (keep the same names, or update `data-src` in `index.html`). Keep them short, muted and under about 2 MB each. `assets/` is cached for a year by returning visitors' browsers, so every reference to it in `index.html` carries a `?v=__ASSET_V__` that `scripts/build.mjs` fills in at deploy time — that's what makes a replaced file actually show up for people who visited before. Don't strip the `?v=__ASSET_V__` when adding a new asset reference.
 - **Social preview:** the site URL in the link-preview tags is filled in automatically on each Vercel build. If you use a custom domain and want to force it, add an environment variable `SITE_URL` (for example `https://yourname.com`) in the Vercel project settings.
