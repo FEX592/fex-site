@@ -19,38 +19,38 @@ nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:22px 30px;padding-top
 .slide{position:absolute;inset:0;display:flex;align-items:center;padding:74px 0 60px;transform-style:preserve-3d;will-change:transform,opacity,filter;
   transition:transform .9s cubic-bezier(.22,.85,.25,1),opacity .55s ease,filter .7s ease;}
 .inner{max-width:820px;margin:0 auto;padding:0 44px 0 30px;width:100%;}
-.tag{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:18px;}
+.tag{display:flex;align-items:center;gap:10px;font-family:var(--mono);font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--soft);margin-bottom:22px;}
 .tag::before{content:'';width:22px;height:2px;background:var(--red);}
-h2.big{font-size:clamp(34px,6.2vw,64px);margin-bottom:22px;max-width:700px;}
+h2.big{font-size:clamp(34px,6.2vw,64px);margin-bottom:28px;max-width:700px;}
 p.lead{color:var(--soft);font-size:clamp(16px,2.1vw,20px);line-height:1.65;max-width:600px;text-shadow:0 1px 18px rgba(0,0,0,.6);}
 p.lead + p.lead{margin-top:14px;}
 
 /* hero */
-.badge{position:relative;width:clamp(92px,15vw,128px);aspect-ratio:1;margin-bottom:24px;}
+.badge{position:relative;width:clamp(92px,15vw,128px);aspect-ratio:1;margin-bottom:28px;}
 .badge::before{content:'';position:absolute;inset:-4px;border-radius:50%;background:conic-gradient(from 0deg,var(--red),rgba(255,45,67,.05),var(--red));animation:spin 5s linear infinite;}
 .badge img{position:relative;width:100%;height:100%;border-radius:50%;object-fit:cover;display:block;border:3px solid var(--bg);}
 @keyframes spin{to{transform:rotate(360deg)}}
-.hero h1{font-size:clamp(84px,19vw,190px);line-height:.9;letter-spacing:-.04em;}
-.role{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(22px,3.8vw,36px);margin-top:16px;text-shadow:0 2px 24px rgba(0,0,0,.6);}
-.hero .lead{margin-top:16px;}
+.hero h1{font-size:clamp(84px,19vw,190px);line-height:.9;letter-spacing:-.01em;text-transform:uppercase;font-style:normal;color:#050506;-webkit-text-stroke-width:clamp(2px,.5vw,4px);-webkit-text-stroke-color:var(--red);text-stroke-width:clamp(2px,.5vw,4px);text-stroke-color:var(--red);transform:skewX(-10deg);display:inline-block;transform-origin:left bottom;}
+.role{font-family:'Syne',sans-serif;font-weight:700;font-size:clamp(22px,3.8vw,36px);margin-top:20px;text-shadow:0 2px 24px rgba(0,0,0,.6);}
+.hero .lead{margin-top:18px;}
 .hint{position:absolute;bottom:34px;left:0;right:0;text-align:center;font-family:var(--mono);font-size:11px;letter-spacing:.18em;color:var(--soft);}
 .hint .arrow{display:block;margin:10px auto 0;width:14px;height:14px;border-right:2px solid var(--red);border-bottom:2px solid var(--red);transform:rotate(45deg);animation:bob 1.6s ease-in-out infinite;}
 @keyframes bob{0%,100%{transform:rotate(45deg) translate(0,0)}50%{transform:rotate(45deg) translate(6px,6px)}}
 
 /* principles */
-.stmt{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(30px,6.6vw,66px);line-height:1.1;padding:5px 0;text-shadow:0 2px 28px rgba(0,0,0,.55);transition:color .3s,transform .4s cubic-bezier(.2,.8,.2,1);cursor:default;}
+.stmt{font-family:'Syne',sans-serif;font-weight:800;font-size:clamp(30px,6.6vw,66px);line-height:1.15;padding:9px 0;text-shadow:0 2px 28px rgba(0,0,0,.55);transition:color .3s,transform .4s cubic-bezier(.2,.8,.2,1);cursor:default;}
 .stmt:hover{color:var(--red);transform:scale(1.03);transform-origin:left center;}
 
 /* steps */
-.step{display:flex;gap:20px;padding:15px 0;border-top:1px solid rgba(255,255,255,.14);}
+.step{display:flex;gap:24px;padding:19px 0;border-top:1px solid rgba(255,255,255,.14);}
 .step:last-child{border-bottom:1px solid rgba(255,255,255,.14);}
 .step .n{font-family:var(--mono);color:var(--red);font-size:14px;min-width:28px;padding-top:4px;}
 .step h4{font-size:clamp(18px,2.4vw,23px);margin-bottom:4px;}
 .step p{color:var(--soft);font-size:clamp(14.5px,1.8vw,16.5px);line-height:1.5;max-width:520px;}
 
 /* rows */
-.rows{display:grid;grid-template-columns:1fr 1fr;gap:12px;}
-.row{background:rgba(12,12,16,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:18px 20px;
+.rows{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.row{background:rgba(12,12,16,.45);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.12);border-radius:16px;padding:21px 23px;
   transition:transform .35s cubic-bezier(.2,.8,.2,1),border-color .3s,box-shadow .3s;}
 .row:hover{transform:translateY(-4px);border-color:var(--red);box-shadow:0 12px 34px -10px rgba(255,45,67,.45);}
 .row .chip{font-family:var(--mono);font-size:11px;letter-spacing:.12em;color:var(--red);text-transform:uppercase;display:block;margin-bottom:8px;}
@@ -58,14 +58,14 @@ p.lead + p.lead{margin-top:14px;}
 .row p{color:var(--soft);font-size:clamp(14px,1.7vw,16px);line-height:1.5;}
 
 /* stack */
-.tools{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px;max-width:640px;}
+.tools{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px;max-width:640px;}
 .tools span{font-family:var(--mono);font-size:14px;padding:9px 17px;border-radius:100px;border:1px solid rgba(255,255,255,.2);background:rgba(12,12,16,.4);backdrop-filter:blur(10px);transition:transform .3s,border-color .3s,color .3s;}
 .tools span:hover{transform:translateY(-3px) scale(1.05);border-color:var(--red);color:var(--red);}
 .tools span.ai{border-color:var(--red);}
 
 /* contact */
-.contact h2{font-size:clamp(44px,9vw,92px);margin-bottom:20px;}
-.btn{position:relative;overflow:hidden;display:inline-block;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px 32px;border-radius:100px;background:var(--red);color:#08080a;margin-top:26px;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;}
+.contact h2{font-size:clamp(44px,9vw,92px);margin-bottom:26px;}
+.btn{position:relative;overflow:hidden;display:inline-block;font-family:'Syne',sans-serif;font-weight:800;font-size:16px;padding:17px 32px;border-radius:100px;background:var(--red);color:#08080a;margin-top:30px;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;}
 .btn::after{content:'';position:absolute;top:0;left:-60%;width:40%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.55),transparent);transform:skewX(-20deg);transition:left .6s;}
 .btn:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 14px 36px -8px rgba(255,45,67,.65);}
 .btn:hover::after{left:130%;}
@@ -94,10 +94,40 @@ p.lead + p.lead{margin-top:14px;}
 
 
 .stmt small{display:block;font-family:'Inter',sans-serif;font-weight:500;font-size:clamp(14px,1.8vw,17px);color:var(--soft);letter-spacing:0;margin-top:3px;text-shadow:0 1px 14px rgba(0,0,0,.6);}
-.grp{margin-top:16px;}
+.grp{margin-top:22px;}
 .grp b{display:block;font-family:var(--mono);font-size:11px;letter-spacing:.16em;color:var(--soft);font-weight:500;margin-bottom:9px;}
 .grp .tools{margin-top:0;}
-.num{margin-top:18px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--soft);}
+.num{margin-top:22px;font-family:var(--mono);font-size:13px;letter-spacing:.12em;color:var(--soft);}
 @media(min-width:721px){.rows .row:last-child:nth-child(odd){grid-column:1/-1;}}
-@media(max-width:720px){.rows{grid-template-columns:1fr;gap:10px;}.row{padding:15px 17px;}.inner{padding:0 40px 0 24px;}}
+@media(max-width:720px){.rows{grid-template-columns:1fr;gap:12px;}.row{padding:17px 19px;}.inner{padding:0 40px 0 24px;}}
+/* the slideshow has no scroll (body{overflow:hidden}) and centers each slide vertically, so on
+   short viewports (small laptop windows, landscape phones) the extra breathing room above can
+   push a tall slide past the viewport and clip it. Pull spacing back in when height is tight. */
+@media(max-height:700px){
+  .tag{margin-bottom:14px;}
+  h2.big{margin-bottom:16px;}
+  .badge{margin-bottom:14px;}
+  .role{margin-top:10px;}
+  .hero .lead{margin-top:10px;}
+  .rows{gap:9px;}
+  .row{padding:14px 16px;}
+  .step{gap:16px;padding:11px 0;}
+  .tools{gap:9px;margin-top:16px;}
+  .grp{margin-top:12px;}
+  .stmt{padding:3px 0;}
+  .contact h2{margin-bottom:14px;}
+  .btn{margin-top:16px;}
+  .num{margin-top:12px;}
+}
+/* narrow phones: five full-width stacked cards (Proof slide) don't fit a non-scrolling
+   viewport at the roomier sizing above, so pull spacing in further here specifically. */
+@media(max-width:480px){
+  .slide{padding:60px 0 44px;}
+  .tag{margin-bottom:12px;}
+  h2.big{font-size:clamp(28px,7.4vw,40px);margin-bottom:14px;}
+  .rows{gap:8px;}
+  .row{padding:13px 15px;}
+  .row h3{margin-bottom:2px;}
+  .step{gap:14px;padding:10px 0;}
+}
 @media(prefers-reduced-motion:reduce){.slide{transition:opacity .3s!important;transform:none!important;filter:none!important;}.go .anim{animation:none!important;}.badge::before,.hint .arrow{animation:none!important;}}
